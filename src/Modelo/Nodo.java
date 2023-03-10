@@ -3,12 +3,12 @@ package Modelo;
 
 
 public class Nodo {
-    Nodo nombreCompleto ;
+    Nodo siguiente ;
     String Apellidos;
     String Nombre;
 
     public Nodo(String Apellidos, String Nombre) {
-        this.nombreCompleto = null;
+        this.siguiente = null;
         this.Apellidos = Apellidos;
         this.Nombre = Nombre;
     }

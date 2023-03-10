@@ -16,10 +16,8 @@ public class Lista {
             primero = nuevoNodo;
         }
         else
-        {
-               
-            primero.nombreCompleto = nuevoNodo;
-            nuevoNodo = primero;
+        {  
+            primero.siguiente = nuevoNodo;
         }
         
         JOptionPane.showMessageDialog(null, "Nombre Ingresado");
@@ -32,9 +30,10 @@ public class Lista {
         int i = 0;
         while(auxiliar!=null)
         {
+            JOptionPane.showMessageDialog(null, auxiliar.getNombre()+auxiliar.getApellidos());
             i++;
-            cadena = cadena + i +". "+ auxiliar.getNombre()+auxiliar.getApellidos()+" " ;
-            auxiliar = auxiliar.nombreCompleto;
+            cadena = cadena + i +". "+ auxiliar.getNombre()+" "+auxiliar.getApellidos()+" \n" ;
+            auxiliar = auxiliar.siguiente;
         }
         return cadena;
     }
